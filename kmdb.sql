@@ -189,7 +189,8 @@ VALUES
 
 -- The SQL statement for the movies output
 -- TODO!
-SELECT title, year, rating, studio FROM movies;
+SELECT title, year, rating, studio 
+FROM movies;
 
 -- Prints a header for the cast output
 .print ""
@@ -200,9 +201,9 @@ SELECT title, year, rating, studio FROM movies;
 
 -- The SQL statement for the cast output
 -- TODO!
-SELECT movie_id, actor_id, role 
+SELECT movies.title, actors.name, top_cast.role 
 FROM top_cast
-INNER JOIN movies ON movies.id = top_cast.movie_id
-INNER JOIN actors ON actors.id = top_cast.actor_id;
+INNER JOIN movies ON top_cast.movie_id = movies.id
+INNER JOIN actors ON top_cast.actor_id = actors.id;
 
 
