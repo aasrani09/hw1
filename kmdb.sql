@@ -202,8 +202,7 @@ SELECT title, year, rating, studio FROM movies;
 -- TODO!
 SELECT movie_id, actor_id, role 
 FROM top_cast
-INNER JOIN movies on movies.id = top_cast.movie_id
-INNER JOIN actors on actors.id = top_cast.actor_id;
-
+INNER JOIN movies ON movies.id = top_cast.movie_id
+INNER JOIN actors ON actors.id = top_cast.actor_id;
 
 
